@@ -36,14 +36,14 @@ function findElement(/* arr, value */) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  let arr = [];
+  const arr = [];
   let i = 0;
   let j = 0;
-  while(i < len){
-    j++;
-    if(j%2 !== 0){
+  while (i < len) {
+    j += 1;
+    if (j % 2 !== 0) {
       arr.push(j);
-      i++;
+      i += 1;
     }
   }
   return arr;
@@ -63,14 +63,14 @@ function generateOdds(len) {
  *    [] => []
  */
 function doubleArray(arr) {
-  let arr2 = [];
-  for(let i = 0; i < arr.length; i++){
+  const arr2 = [];
+  for (let i = 0; i < arr.length; i += 1) {
     arr2.push(arr[i]);
   }
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i += 1) {
     arr2.push(arr[i]);
   }
-  return arr2
+  return arr2;
 }
 
 
@@ -86,13 +86,8 @@ function doubleArray(arr) {
  *    [] => []
  */
 function getArrayOfPositives(arr) {
-  let arr2 = []
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i]%2 == 0){
-      arr2.push(arr[i])
-    }
-  }
-  return arr2
+  const arr22 = arr.filter((ar) => ar % 2 === 0);
+  return arr22;
 }
 
 /**
